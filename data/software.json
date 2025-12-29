@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "id": "proj-001",
+      "title": "Project Name",
+      "oneLiner": "What it is in one line.",
+      "description": "Longer description. What you built, why, what outcome.",
+      "stack": ["Next.js", "Three.js", "Node"],
+      "github": "https://github.com/...",
+      "live": "https://...",
+      "cover": "assets/img/software/proj-001.jpg"
+    }
+  ]
+}

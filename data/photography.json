@@ -1,0 +1,15 @@
+{
+  "albums": [
+    {
+      "id": "album-001",
+      "title": "Album Title",
+      "subtitle": "Cinematic note / place / year",
+      "cover": "assets/img/photo/album-001/cover.jpg",
+      "tags": ["portrait", "night", "film"],
+      "photos": [
+        { "src": "assets/img/photo/album-001/01.jpg", "alt": "..." },
+        { "src": "assets/img/photo/album-001/02.jpg", "alt": "..." }
+      ]
+    }
+  ]
+}
