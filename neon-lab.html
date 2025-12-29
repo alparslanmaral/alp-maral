@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neon Lab • Realms</title>
+  <meta name="description" content="Neon Lab realm — glow controls and saved presets." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/neon.css" />
+</head>
+<body class="realmBody neonBody">
+  <header class="topbar">
+    <div class="brand">
+      <div class="sig" aria-hidden="true"></div>
+      <div>
+        <div class="brand__title">Neon Lab</div>
+        <div class="brand__sub">Tweak glow. Save preset. Collect a spark.</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="pill" href="index.html">Hub</a>
+      <a class="pill" href="inventory.html">Inventory</a>
+      <button class="pill pill--ghost" id="themeToggle" type="button">Theme</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="lab" aria-label="Neon lab">
+      <div class="stage" id="stage" tabindex="0" aria-label="Neon stage">
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="glowText">
+          <div class="kicker mono">REALM 02</div>
+          <h1 class="h1">Build your neon.</h1>
+          <p class="lede">Adjust the controls. Save a preset (stored locally). Grab a “spark” to your inventory.</p>
+          <div class="row">
+            <button class="btn" id="collectSpark" type="button">Collect spark</button>
+            <button class="btn btn--soft" id="savePreset" type="button">Save preset</button>
+            <button class="btn btn--soft" id="loadPreset" type="button">Load preset</button>
+            <a class="btn btn--soft" href="darkroom.html">Next: Darkroom</a>
+          </div>
+          <div class="tiny" id="neonMsg" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <aside class="controls" aria-label="Controls">
+        <div class="controls__title">Controls</div>
+
+        <label class="field">
+          <span class="field__label">Glow</span>
+          <input type="range" min="0" max="100" value="72" id="glow" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Hue</span>
+          <input type="range" min="160" max="340" value="290" id="hue" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Scanlines</span>
+          <input type="range" min="0" max="100" value="22" id="scan" />
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="pulse" checked />
+          <span>Pulse</span>
+        </label>
+
+        <div class="controls__sep"></div>
+        <div class="tiny">Tip: Press <span class="kbd">S</span> to save, <span class="kbd">L</span> to load.</div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/neon.js"></script>
+</body>
+</html>

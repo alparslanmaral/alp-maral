@@ -1,0 +1,75 @@
+/* Neon Lab realm */
+.neonBody{ background:
+  radial-gradient(1000px 600px at 20% 0%, rgba(255,92,122,.18), transparent 60%),
+  radial-gradient(900px 650px at 90% 0%, rgba(124,92,255,.22), transparent 60%),
+  radial-gradient(900px 650px at 50% 110%, rgba(49,213,255,.14), transparent 57%),
+  var(--bg);
+}
+
+.lab{ display:grid; grid-template-columns: 1.35fr .65fr; gap: 14px; align-items:start; }
+.stage{
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  min-height: 440px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(900px 520px at 40% 30%, rgba(255,255,255,.06), transparent 60%),
+    linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  box-shadow: var(--shadow);
+  outline:none;
+}
+
+.scanlines{
+  position:absolute; inset:0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,var(--scan, .10)) 0px,
+    rgba(255,255,255,var(--scan, .10)) 1px,
+    transparent 3px,
+    transparent 7px
+  );
+  opacity: .55;
+  mix-blend-mode: overlay;
+  pointer-events:none;
+}
+
+.glowText{ position:relative; padding: 22px; }
+
+.stage::before{
+  content:"";
+  position:absolute; inset:-60px;
+  background:
+    radial-gradient(360px 260px at 25% 40%, hsla(var(--hue, 290), 90%, 65%, .34), transparent 60%),
+    radial-gradient(420px 320px at 75% 35%, hsla(calc(var(--hue, 290) + 70), 90%, 62%, .25), transparent 60%);
+  filter: blur(calc(var(--glow, 70) * .14px)) saturate(1.15);
+  opacity: .9;
+  transform: translateY(calc((var(--pulse, 1) * 1px) * var(--t, 0)));
+  transition: filter .2s ease;
+}
+
+.stage h1{
+  text-shadow:
+    0 0 calc(var(--glow, 70) * .2px) hsla(var(--hue, 290), 95%, 70%, .65),
+    0 0 calc(var(--glow, 70) * .33px) hsla(var(--hue, 290), 95%, 70%, .35);
+}
+
+.controls{
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  padding: 16px;
+  background: color-mix(in srgb, var(--panel) 74%, transparent);
+  box-shadow: var(--shadow);
+}
+.controls__title{ font-weight: 800; margin-bottom: 10px; }
+
+.field{ display:grid; gap: 6px; margin: 10px 0; }
+.field__label{ font-size: 12px; color: var(--muted); }
+input[type="range"]{ width: 100%; }
+
+.check{ display:flex; gap: 10px; align-items:center; margin-top: 10px; color: var(--muted); font-size: 13px; }
+.controls__sep{ height:1px; background: var(--line); margin: 14px 0; }
+
+@media (max-width: 920px){
+  .lab{ grid-template-columns: 1fr; }
+}

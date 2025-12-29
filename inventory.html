@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventory • Realms</title>
+  <meta name="description" content="Inventory — localStorage backed items, notes, export and import." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/hub.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="sig" aria-hidden="true"></div>
+      <div>
+        <div class="brand__title">Inventory</div>
+        <div class="brand__sub">localStorage stash + export/import</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="pill" href="index.html">Hub</a>
+      <a class="pill" href="inventory.html" aria-current="page">Inventory</a>
+      <a class="pill" href="contact.html">Contact</a>
+      <button class="pill pill--ghost" id="themeToggle" type="button">Theme</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="inventory">
+      <div class="inventory__head">
+        <div>
+          <h1 class="h1">Your collected items</h1>
+          <p class="lede">Collected in realms, stored locally. Add notes, export, or import.</p>
+        </div>
+        <div class="row">
+          <button class="btn" id="clearInv" type="button">Clear</button>
+          <button class="btn btn--soft" id="exportInv" type="button">Export JSON</button>
+          <label class="btn btn--soft fileBtn">
+            Import JSON
+            <input type="file" id="importInv" accept="application/json" hidden />
+          </label>
+        </div>
+      </div>
+
+      <div class="inventory__grid">
+        <div class="card">
+          <div class="card__title">Items</div>
+          <div class="tiny" id="invSummary">—</div>
+          <div class="list" id="invList" aria-live="polite"></div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">Notes</div>
+          <p class="tiny">Saved per device.</p>
+          <textarea class="textarea" id="invNotes" rows="10" placeholder="Jot down what you want to build next…"></textarea>
+          <div class="row" style="margin-top:10px">
+            <button class="btn" id="saveNotes" type="button">Save notes</button>
+            <button class="btn btn--soft" id="eraseNotes" type="button">Erase</button>
+          </div>
+          <div class="tiny" id="notesMsg" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="tiny" id="invMsg" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/ui.js"></script>
+</body>
+</html>

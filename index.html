@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alp Maral • Realms</title>
+  <meta name="description" content="A vanilla HTML/CSS/JS portfolio hub with small interactive realms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/hub.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="sig" aria-hidden="true"></div>
+      <div>
+        <div class="brand__title">Alp Maral</div>
+        <div class="brand__sub">Realms • vanilla HTML/CSS/JS</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="pill" href="index.html" aria-current="page">Hub</a>
+      <a class="pill" href="inventory.html">Inventory</a>
+      <a class="pill" href="contact.html">Contact</a>
+      <button class="pill pill--ghost" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__copy">
+        <h1 id="heroTitle" class="h1">A small portfolio you can <span class="grad">touch</span>.</h1>
+        <p class="lede" id="profileSummary">Loading profile…</p>
+
+        <div class="chips" id="skillChips" aria-label="Key software"></div>
+
+        <div class="ctaRow">
+          <a class="btn" href="wave.html">Enter: Wave</a>
+          <a class="btn btn--soft" href="neon-lab.html">Enter: Neon Lab</a>
+          <a class="btn btn--soft" href="darkroom.html">Enter: Darkroom</a>
+        </div>
+
+        <div class="tiny" id="nowPlaying" aria-live="polite"></div>
+      </div>
+
+      <aside class="hero__card" aria-label="Quick card">
+        <div class="card card--glow">
+          <div class="card__row">
+            <div class="avatar" id="avatar" aria-hidden="true">AM</div>
+            <div>
+              <div class="card__title" id="profileName">Loading…</div>
+              <div class="card__sub" id="profileRole">—</div>
+            </div>
+          </div>
+
+          <div class="card__grid" id="socialGrid" aria-label="Social links"></div>
+
+          <div class="card__foot">
+            <a class="link" href="inventory.html">Inventory</a>
+            <span class="dot" aria-hidden="true"></span>
+            <a class="link" href="contact.html">Say hi</a>
+          </div>
+        </div>
+
+        <div class="meter" aria-label="Session meter">
+          <div class="meter__label">Session sparks</div>
+          <div class="meter__bar"><div class="meter__fill" id="sparkFill" style="width: 18%"></div></div>
+          <div class="meter__hint">Interact in realms to collect items.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="Realms">
+      <a class="realm realm--wave" href="wave.html">
+        <div class="realm__top">
+          <div class="realm__title">Wave</div>
+          <div class="realm__tag">motion • gradients</div>
+        </div>
+        <p class="realm__desc">A soft kinetic banner you can nudge and collect “ripples”.</p>
+        <div class="realm__meta"><span>Collectable:</span> Ripple</div>
+      </a>
+
+      <a class="realm realm--neon" href="neon-lab.html">
+        <div class="realm__top">
+          <div class="realm__title">Neon Lab</div>
+          <div class="realm__tag">neon • toggles</div>
+        </div>
+        <p class="realm__desc">Adjust glow, scanlines, and synth-ish UI. Save presets.</p>
+        <div class="realm__meta"><span>Collectable:</span> Spark</div>
+      </a>
+
+      <a class="realm realm--dark" href="darkroom.html">
+        <div class="realm__top">
+          <div class="realm__title">Darkroom</div>
+          <div class="realm__tag">photos • tags</div>
+        </div>
+        <p class="realm__desc">A clean gallery driven by JSON with keyboard navigation.</p>
+        <div class="realm__meta"><span>Collectable:</span> Grain</div>
+      </a>
+
+      <a class="realm realm--inv" href="inventory.html">
+        <div class="realm__top">
+          <div class="realm__title">Inventory</div>
+          <div class="realm__tag">localStorage</div>
+        </div>
+        <p class="realm__desc">Your collected items + notes. Export/import as JSON.</p>
+        <div class="realm__meta"><span>Includes:</span> Backup</div>
+      </a>
+    </section>
+
+    <section class="footer" aria-label="Footer">
+      <div class="footer__left">
+        <div class="tiny">Built with vanilla HTML/CSS/JS. No 3D. No framework.</div>
+      </div>
+      <div class="footer__right tiny" id="footerStamp"></div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

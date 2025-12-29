@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Realms</title>
+  <meta name="description" content="Contact — JSON-driven links and a small copy interaction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/hub.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="sig" aria-hidden="true"></div>
+      <div>
+        <div class="brand__title">Contact</div>
+        <div class="brand__sub">Drop a line • copy-to-clipboard</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="pill" href="index.html">Hub</a>
+      <a class="pill" href="inventory.html">Inventory</a>
+      <a class="pill" href="contact.html" aria-current="page">Contact</a>
+      <button class="pill pill--ghost" id="themeToggle" type="button">Theme</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="contact">
+      <div class="card card--glow">
+        <h1 class="h1">Say hi</h1>
+        <p class="lede" id="contactIntro">Loading…</p>
+
+        <div class="contact__grid">
+          <div>
+            <div class="card__title">Email</div>
+            <div class="mono" id="emailText">—</div>
+            <div class="row" style="margin-top:10px">
+              <button class="btn" id="copyEmail" type="button">Copy</button>
+              <a class="btn btn--soft" id="mailto" href="#">Open mail app</a>
+            </div>
+            <div class="tiny" id="copyMsg" aria-live="polite"></div>
+          </div>
+
+          <div>
+            <div class="card__title">Links</div>
+            <div class="card__grid" id="contactLinks"></div>
+          </div>
+        </div>
+
+        <div class="tiny">Tip: your inventory is local to this browser.</div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/ui.js"></script>
+</body>
+</html>

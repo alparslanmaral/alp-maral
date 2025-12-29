@@ -1,15 +1,25 @@
 {
-  "albums": [
+  "items": [
     {
-      "id": "album-001",
-      "title": "Album Title",
-      "subtitle": "Cinematic note / place / year",
-      "cover": "assets/img/photo/album-001/cover.jpg",
-      "tags": ["portrait", "night", "film"],
-      "photos": [
-        { "src": "assets/img/photo/album-001/01.jpg", "alt": "..." },
-        { "src": "assets/img/photo/album-001/02.jpg", "alt": "..." }
-      ]
+      "title": "Soft Neon Corner",
+      "desc": "Abstract light study with a violet-cyan accent.",
+      "tags": ["abstract", "light"],
+      "accent": "#7c5cff",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><defs><radialGradient id='g' cx='30%' cy='25%' r='70%'><stop offset='0' stop-color='%237c5cff'/><stop offset='0.35' stop-color='%2331d5ff'/><stop offset='1' stop-color='%230b0d12'/></radialGradient></defs><rect width='1400' height='900' fill='url(%23g)'/><circle cx='980' cy='540' r='260' fill='%23ff5c7a' opacity='.18'/><circle cx='420' cy='520' r='320' fill='%2345f3a6' opacity='.10'/></svg>"
+    },
+    {
+      "title": "Grain Study",
+      "desc": "Muted tones with gentle contrast.",
+      "tags": ["study", "texture"],
+      "accent": "#ffd36e",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><rect width='1400' height='900' fill='%2311141b'/><circle cx='520' cy='350' r='360' fill='%23ffd36e' opacity='.12'/><circle cx='950' cy='520' r='320' fill='%237c5cff' opacity='.10'/><g opacity='.16'>%3C!-- noise --%3E</g></svg>"
+    },
+    {
+      "title": "Night Grid",
+      "desc": "A clean grid with a faint blue glow.",
+      "tags": ["abstract", "grid"],
+      "accent": "#31d5ff",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><rect width='1400' height='900' fill='%230b0d12'/><g opacity='.26' stroke='%2331d5ff'><path d='M0 120H1400M0 240H1400M0 360H1400M0 480H1400M0 600H1400M0 720H1400M120 0V900M240 0V900M360 0V900M480 0V900M600 0V900M720 0V900M840 0V900M960 0V900M1080 0V900M1200 0V900M1320 0V900'/></g><circle cx='420' cy='320' r='260' fill='%237c5cff' opacity='.10'/></svg>"
     }
   ]
 }

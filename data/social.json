@@ -1,30 +1,8 @@
 {
-  "featured": [
-    {
-      "id": "ig-main",
-      "title": "Instagram",
-      "subtitle": "@yourhandle",
-      "url": "https://instagram.com/...",
-      "cover": "assets/img/social/instagram-cover.jpg",
-      "stats": ["Reels", "Edits", "Brand Collabs"]
-    },
-    {
-      "id": "yt-main",
-      "title": "YouTube",
-      "subtitle": "@yourchannel",
-      "url": "https://youtube.com/@...",
-      "cover": "assets/img/social/youtube-cover.jpg",
-      "stats": ["Shorts", "Long-form", "Series"]
-    }
-  ],
-  "cards": [
-    {
-      "id": "campaign-001",
-      "title": "Campaign / Case Study Title",
-      "summary": "1–2 lines about what you did and the outcome.",
-      "tags": ["editing", "growth", "branding"],
-      "cover": "assets/img/social/campaign-001.jpg",
-      "link": "https://..."
-    }
+  "links": [
+    { "label": "GitHub", "handle": "@alparslanmaral", "url": "https://github.com/alparslanmaral" },
+    { "label": "LinkedIn", "handle": "/in/alp", "url": "https://www.linkedin.com/" },
+    { "label": "X", "handle": "@alp", "url": "https://x.com/" },
+    { "label": "Email", "handle": "alp@example.com", "url": "mailto:alp@example.com" }
   ]
 }

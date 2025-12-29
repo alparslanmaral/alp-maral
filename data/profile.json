@@ -1,10 +1,7 @@
 {
   "name": "Alp Maral",
-  "domain": "alpmaral.com",
-  "tagline": "Three Realms. One progression.",
-  "email": "hello@alpmaral.com",
-  "links": {
-    "instagram": "https://instagram.com/...",
-    "youtube": "https://youtube.com/@..."
-  }
+  "role": "Product-minded Developer",
+  "summary": "I build fast, minimal interfaces with playful micro-interactions. This site is a small collection of ‘realms’—each one a focused experiment in UI, motion, and data-driven content.",
+  "email": "alp@example.com",
+  "contactIntro": "If you want to collaborate, hire, or just trade UI notes, email me or reach out via the links."
 }

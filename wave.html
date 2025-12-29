@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wave • Realms</title>
+  <meta name="description" content="Wave realm — a kinetic gradient and ripple collectable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/wave.css" />
+</head>
+<body class="realmBody">
+  <header class="topbar">
+    <div class="brand">
+      <div class="sig" aria-hidden="true"></div>
+      <div>
+        <div class="brand__title">Wave</div>
+        <div class="brand__sub">Move your pointer. Tap to collect.</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="pill" href="index.html">Hub</a>
+      <a class="pill" href="inventory.html">Inventory</a>
+      <button class="pill pill--ghost" id="themeToggle" type="button">Theme</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="arena" aria-label="Wave arena">
+      <div class="banner" id="banner" tabindex="0" role="button" aria-label="Wave banner; click to create ripple">
+        <div class="banner__noise" aria-hidden="true"></div>
+        <div class="banner__content">
+          <div class="kicker">REALM 01</div>
+          <h1 class="h1">Kinetic gradients, gentle.</h1>
+          <p class="lede">Pointer movement bends the wave. Click / tap to spawn a ripple and store it in your inventory.</p>
+
+          <div class="row">
+            <button class="btn" id="collectRipple" type="button">Collect ripple</button>
+            <button class="btn btn--soft" id="calm" type="button">Calm</button>
+            <a class="btn btn--soft" href="neon-lab.html">Next: Neon Lab</a>
+          </div>
+
+          <div class="tiny" id="waveHint" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Stats">
+        <div class="panel__title">Live</div>
+        <div class="panel__grid">
+          <div class="stat"><div class="stat__k">Ripples</div><div class="stat__v" id="rippleCount">0</div></div>
+          <div class="stat"><div class="stat__k">Intensity</div><div class="stat__v" id="intensity">—</div></div>
+          <div class="stat"><div class="stat__k">Tip</div><div class="stat__v">Press <span class="kbd">R</span> to collect</div></div>
+        </div>
+
+        <div class="panel__sep"></div>
+        <div class="tiny">Data is saved to <span class="mono">localStorage</span>. Clear it in Inventory.</div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/wave.js"></script>
+</body>
+</html>
